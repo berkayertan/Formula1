@@ -8,6 +8,7 @@ import com.berkayertan.recycler.databinding.CarBinding
 class Adapter(private val CarsandDrivers : List<Model>) : RecyclerView.Adapter<Adapter.ViewHolder> () {
     class ViewHolder(private val binding : CarBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind (carDriver: Model){
+            binding.imageView.setImageResource(carDriver.driverImage)
             binding.carNameTextView.text = carDriver.carName
             binding.driverNameTextView.text = carDriver.driverName
         }
