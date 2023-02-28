@@ -1,7 +1,9 @@
 package com.berkayertan.recycler
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.berkayertan.recycler.databinding.CarBinding
 
@@ -11,6 +13,11 @@ class Adapter(private val CarsandDrivers : List<Model>) : RecyclerView.Adapter<A
             binding.imageView.setImageResource(carDriver.driverImage)
             binding.carNameTextView.text = carDriver.carName
             binding.driverNameTextView.text = carDriver.driverName
+
+            binding.root.setOnClickListener {
+                val intent = Intent(binding.root.context, DriverDetailsActivity::class.java)
+                binding.root.context.startActivity(intent)
+            }
         }
 
 

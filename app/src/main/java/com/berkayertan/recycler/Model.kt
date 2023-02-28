@@ -1,3 +1,3 @@
 package com.berkayertan.recycler
 
-data class Model(val carName : String, val driverName : String, val driverImage : Int)
+data class Model(val driverName : String,val carName : String, val driverImage : Int)
