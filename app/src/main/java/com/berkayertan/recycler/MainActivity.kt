@@ -17,12 +17,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        
+
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
+                R.id.home -> setCurrentFragment(homefragment)
                 R.id.drivers -> setCurrentFragment(fFragment)
-
+                R.id.teams -> setCurrentFragment(sFragment)
 
 
 
