@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private val fFragment = FirstFragment()
-
+    private val sFragment = SecondFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.home -> setCurrentFragment(homefragment)
                 R.id.drivers -> setCurrentFragment(fFragment)
                 R.id.teams -> setCurrentFragment(sFragment)
 
