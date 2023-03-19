@@ -1,9 +1,10 @@
-package com.berkayertan.recycler
+package com.berkayertan.recycler.adapters
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.berkayertan.recycler.DriverDetailsActivity
 import com.berkayertan.recycler.data.BrandData
 import com.berkayertan.recycler.databinding.BrandBinding
 
@@ -24,7 +25,7 @@ class AdapterBrand(private val Brands : List<BrandData>) : RecyclerView.Adapter<
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = BrandBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ViewHolder(binding)
     }

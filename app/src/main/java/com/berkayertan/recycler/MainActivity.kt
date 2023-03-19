@@ -6,6 +6,8 @@ import android.os.Bundle
 
 import com.berkayertan.recycler.databinding.ActivityMainBinding
 import androidx.fragment.app.Fragment
+import com.berkayertan.recycler.fragments.FirstFragment
+import com.berkayertan.recycler.fragments.SecondFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
