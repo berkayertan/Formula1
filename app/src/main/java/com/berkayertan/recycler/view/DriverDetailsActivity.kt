@@ -1,4 +1,4 @@
-package com.berkayertan.recycler
+package com.berkayertan.recycler.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

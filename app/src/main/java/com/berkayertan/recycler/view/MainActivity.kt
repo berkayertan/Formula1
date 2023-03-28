@@ -1,4 +1,4 @@
-package com.berkayertan.recycler
+package com.berkayertan.recycler.view
 
 
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,7 @@ import android.os.Bundle
 
 import com.berkayertan.recycler.databinding.ActivityMainBinding
 import androidx.fragment.app.Fragment
-import com.berkayertan.recycler.fragments.FirstFragment
-import com.berkayertan.recycler.fragments.SecondFragment
+import com.berkayertan.recycler.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -25,9 +24,6 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.drivers -> setCurrentFragment(fFragment)
                 R.id.teams -> setCurrentFragment(sFragment)
-
-
-
 
             }
             true

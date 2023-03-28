@@ -19,4 +19,9 @@
         android:title="Teams"
         android:icon="@drawable/brand" />
 
+    <item
+        android:id="@+id/standings"
+        android:title="Standings"
+        android:icon="@drawable/standing"/>
+
 </menu>

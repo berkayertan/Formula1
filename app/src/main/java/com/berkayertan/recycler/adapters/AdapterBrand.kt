@@ -4,7 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.berkayertan.recycler.DriverDetailsActivity
+import com.berkayertan.recycler.view.DriverDetailsActivity
 import com.berkayertan.recycler.data.BrandData
 import com.berkayertan.recycler.databinding.BrandBinding
 

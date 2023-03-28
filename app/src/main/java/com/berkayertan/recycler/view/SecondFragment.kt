@@ -1,4 +1,4 @@
-package com.berkayertan.recycler.fragments
+package com.berkayertan.recycler.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
