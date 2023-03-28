@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.berkayertan.recycler.data.StandingModel
 import com.berkayertan.recycler.databinding.StandingItemsBinding
 
-class StandingAdapter(val standingList : ArrayList<StandingModel>) : RecyclerView.Adapter<StandingAdapter.ViewHolder>() {
+class StandingAdapter(var standingList : List<StandingModel>) : RecyclerView.Adapter<StandingAdapter.ViewHolder>() {
     class ViewHolder(private val binding : StandingItemsBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(stand: StandingModel){
@@ -14,6 +14,7 @@ class StandingAdapter(val standingList : ArrayList<StandingModel>) : RecyclerVie
             binding.position.text = stand.position.toString()
             binding.points.text = stand.points.toString()
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,6 +29,10 @@ class StandingAdapter(val standingList : ArrayList<StandingModel>) : RecyclerVie
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(standingList[position])
+    }
+    fun setData(newList: List<StandingModel>) {
+        standingList = newList
+        notifyDataSetChanged()
     }
 
 }

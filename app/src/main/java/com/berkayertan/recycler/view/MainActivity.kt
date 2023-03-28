@@ -3,7 +3,6 @@ package com.berkayertan.recycler.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
 import com.berkayertan.recycler.databinding.ActivityMainBinding
 import androidx.fragment.app.Fragment
 import com.berkayertan.recycler.R
@@ -12,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private val fFragment = FirstFragment()
     private val sFragment = SecondFragment()
+    private val tFragment = StandingFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.drivers -> setCurrentFragment(fFragment)
                 R.id.teams -> setCurrentFragment(sFragment)
+                R.id.standings -> setCurrentFragment(tFragment)
 
             }
             true
