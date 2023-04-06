@@ -24,6 +24,7 @@ class Adapter(private val CarsandDrivers : List<Model>) : RecyclerView.Adapter<A
 
     }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = CarBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ViewHolder(binding)
