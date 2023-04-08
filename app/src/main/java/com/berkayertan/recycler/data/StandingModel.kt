@@ -10,11 +10,11 @@ data class StandingModel(
     @SerializedName("surname")
     val surname : String?,
     @SerializedName("acronym")
-    val shortname : String?,
+    val acronym : String?,
     @SerializedName("team")
     val team : String?,
     @SerializedName("points")
-    val points : Int,
+    val points : Int
 
 )
 /*

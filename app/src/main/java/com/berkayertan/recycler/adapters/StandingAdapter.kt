@@ -13,6 +13,10 @@ class StandingAdapter(var standingList : List<StandingModel>) : RecyclerView.Ada
             binding.name.text = stand.name
             binding.position.text = stand.position.toString()
             binding.points.text = stand.points.toString()
+            binding.team.text = stand.team
+            binding.surname.text = stand.surname
+            binding.acronym.text = stand.acronym
+
         }
 
     }

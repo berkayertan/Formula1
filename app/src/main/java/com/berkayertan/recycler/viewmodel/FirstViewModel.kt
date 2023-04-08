@@ -15,6 +15,13 @@ class FirstViewModel : ViewModel() {
     private val disposable = CompositeDisposable()
     val drivers = MutableLiveData<List<StandingModel>>()
 
+
+    fun refreshData() {
+        getDataFromAPI()
+
+    }
+
+
      fun getDataFromAPI() {
         disposable.add(
             standings.getData()

@@ -39,11 +39,11 @@ class StandingFragment : Fragment() {
 
 
         viewModel = ViewModelProvider(this).get(FirstViewModel::class.java)
+        viewModel.refreshData()
         viewModel.drivers.observe(viewLifecycleOwner) { drivers ->
             adapter.setData(drivers)
         }
 
-        // Call the method to fetch data from the API
         viewModel.getDataFromAPI()
     }
 
