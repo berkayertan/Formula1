@@ -1,38 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+
+    <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_marginStart="10dp">
-
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="30dp">
     <TextView
         android:id="@+id/position"
         android:layout_width="30dp"
-        android:layout_height="30dp"/>
+        android:layout_height="30dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"/>
     <TextView
         android:id="@+id/name"
         android:layout_width="60dp"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"/>
 
     <TextView
         android:id="@+id/surname"
         android:layout_width="70dp"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"/>
 
     <TextView
         android:id="@+id/acronym"
         android:layout_width="50dp"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"/>
 
     <TextView
         android:id="@+id/team"
         android:layout_width="60dp"
-        android:layout_height="65dp"/>
+        android:layout_height="65dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"/>
 
     <TextView
         android:id="@+id/points"
         android:layout_width="50dp"
-        android:layout_height="50dp"/>
-
-
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"/>
 </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_horizontal|top">
+
+        <TextView
+            android:text="POS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:text="NAME"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:text="SURNAME"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="SV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:text="TEAM"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:text="POINTS"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"/>
+
+
+
+    </LinearLayout>
+</FrameLayout>
