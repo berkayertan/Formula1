@@ -24,4 +24,9 @@
         android:title="Standings"
         android:icon="@drawable/standing"/>
 
+    <item
+        android:id="@+id/calendar"
+        android:title="Calendar"
+        android:icon="@drawable/standing"/>
+
 </menu>

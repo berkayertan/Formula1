@@ -1,5 +1,6 @@
 package com.berkayertan.recycler.service
 
+import com.berkayertan.recycler.data.ConstructorStandingModel
 import com.berkayertan.recycler.data.StandingModel
 import io.reactivex.Single
 import okhttp3.OkHttpClient
@@ -29,5 +30,8 @@ class Standings {
 
     fun getData(): Single<List<StandingModel>> {
         return api.getStandings()
+    }
+    fun getConstructorStandings(): Single<List<ConstructorStandingModel>> {
+        return api.getConstructorStandings()
     }
 }
