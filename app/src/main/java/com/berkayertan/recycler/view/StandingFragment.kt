@@ -31,6 +31,7 @@ class StandingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding = StandingFragmentBinding.bind(view)
 
+
         val adapter = StandingAdapter(emptyList())
         binding.recyclerview.adapter = adapter
         binding.recyclerview.layoutManager = LinearLayoutManager(requireContext())
@@ -45,7 +46,9 @@ class StandingFragment : Fragment() {
         }
 
         viewModel.getDataFromAPI()
+
     }
+
 
     override fun onDestroy() {
         super.onDestroy()

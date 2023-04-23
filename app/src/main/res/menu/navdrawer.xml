@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/stand"
+        android:title="Drivers Standing"
+        android:icon="@drawable/car" />
+
+
+    <item
+        android:id="@+id/constructor"
+        android:title="Constructors Standing"
+        android:icon="@drawable/standing"/>
+
+</menu>
