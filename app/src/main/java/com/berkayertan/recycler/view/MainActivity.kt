@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val fFragment = FirstFragment()
     private val sFragment = SecondFragment()
     private val driverstand = StandingFragment()
+    private val news = NewsFragment()
     private val constructorstand = ConstructorStandingFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,8 +47,7 @@ class MainActivity : AppCompatActivity() {
                 //R.id.standings -> setCurrentFragment(driverstand)
                 //R.id.calendar -> setCurrentFragment(constructorstand)
                 R.id.home -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
+                   setCurrentFragment(news)
                 }
             }
             true
