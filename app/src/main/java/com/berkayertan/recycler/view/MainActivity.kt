@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.stand-> setCurrentFragment(driverstand)
                 R.id.constructor-> setCurrentFragment(constructorstand)
             }
+            binding.drawerLayout.closeDrawers()
             true
         }
 
