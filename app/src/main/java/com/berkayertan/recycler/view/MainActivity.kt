@@ -1,7 +1,7 @@
 package com.berkayertan.recycler.view
 
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private val driverstand = StandingFragment()
     private val news = NewsFragment()
     private val constructorstand = ConstructorStandingFragment()
+    private val raceResults= RaceResultFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.teams -> setCurrentFragment(sFragment)
                 //R.id.standings -> setCurrentFragment(driverstand)
                 //R.id.calendar -> setCurrentFragment(constructorstand)
+                R.id.results-> setCurrentFragment(raceResults)
                 R.id.home -> {
                    setCurrentFragment(news)
                 }

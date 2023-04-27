@@ -1,6 +1,7 @@
 package com.berkayertan.recycler.service
 
 import com.berkayertan.recycler.data.ConstructorStandingModel
+import com.berkayertan.recycler.data.RaceResultsModel
 import com.berkayertan.recycler.data.StandingModel
 import io.reactivex.Single
 import retrofit2.http.GET
@@ -13,6 +14,9 @@ interface StandingAPI {
 
     @GET("2023/getConstructorStandings/")
     fun getConstructorStandings(): Single<List<ConstructorStandingModel>>
+
+    @GET("2023/getRaceResults")
+    fun getRaceResults(): Single<List<RaceResultsModel>>
 }
 
 

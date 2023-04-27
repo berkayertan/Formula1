@@ -3,6 +3,7 @@ package com.berkayertan.recycler.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.berkayertan.recycler.data.ConstructorStandingModel
+import com.berkayertan.recycler.data.RaceResultsModel
 import com.berkayertan.recycler.data.StandingModel
 import com.berkayertan.recycler.service.Standings
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -16,14 +17,18 @@ class FirstViewModel : ViewModel() {
     private val disposable = CompositeDisposable()
     val drivers = MutableLiveData<List<StandingModel>>()
     val constructors = MutableLiveData<List<ConstructorStandingModel>>()
+    val results = MutableLiveData<List<RaceResultsModel>>()
 
     fun refreshData() {
         getDataFromAPI()
-
     }
 
     fun constData() {
         getConstDataFromAPI()
+    }
+
+    fun resultData() {
+        getRaceResultsDataFromAPI()
     }
 
 
@@ -46,7 +51,7 @@ class FirstViewModel : ViewModel() {
 
     fun getConstDataFromAPI() {
         disposable.add(
-            standings.getConstructorStandings()
+            standings.getConstructorData()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<List<ConstructorStandingModel>>() {
@@ -59,5 +64,22 @@ class FirstViewModel : ViewModel() {
                     }
                 })
         )
+    }
+
+    fun getRaceResultsDataFromAPI(){
+        disposable.add(
+            standings.getRaceResultsData()
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableSingleObserver<List<RaceResultsModel>>() {
+                    override fun onSuccess(t: List<RaceResultsModel>) {
+                        results.value = t
+                    }
+
+                    override fun onError(e: Throwable) {
+                        e.printStackTrace()
+                    }
+                })
+                )
     }
 }
