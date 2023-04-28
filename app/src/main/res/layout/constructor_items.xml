@@ -42,8 +42,6 @@
         android:layout_gravity="center_horizontal|top">
 
 
-
-
         <TextView
             android:id="@+id/pos"
             android:layout_width="30dp"
@@ -62,7 +60,6 @@
             android:layout_marginStart="10dp"
             android:textStyle="bold"/>
 
-
         <TextView
             android:id="@+id/pts"
             android:layout_width="60dp"
@@ -70,9 +67,6 @@
             android:textColor="@color/red"
             android:text="POINTS"
             android:textStyle="bold"/>
-
-
-
 
     </LinearLayout>
 
